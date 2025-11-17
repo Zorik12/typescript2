@@ -100,3 +100,16 @@ function compareNumbers(j, k) {
 }
 console.log("5, 3:", compareNumbers(5, 3));
 console.log("2, 7:", compareNumbers(2, 7));
+// @ts-ignore
+process.stdout.write("Возраст: ");
+// @ts-ignore
+process.stdin.once("data", d => {
+    const n = +d;
+    if (n < 18 || isNaN(n))
+        console.log("Доступ запрещён");
+    else
+        for (let i = 1; i <= 10; i++)
+            console.log(`${n} × ${i} = ${n * i}`);
+    // @ts-ignore
+    process.exit();
+});
