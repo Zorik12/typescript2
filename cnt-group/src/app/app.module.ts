@@ -5,16 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesComponent } from './pages/pages.component';
 import { HeaderComponent } from './@theme/components/header/header.component';
-import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import { FooterComponent } from './pages/footer/footer.component';
-
+import { SidebarComponent } from './pages/sidebar/sidebar.component';
+import { MenuParentsComponent } from './@theme/components/menu/components/menu-parents/menu-parents.component';
+import { MenuChildrensComponent } from './@theme/components/menu/components/menu-childrens/menu-childrens.component';
 @NgModule({
   declarations: [
     AppComponent,
     PagesComponent,
     HeaderComponent,
+    FooterComponent,
     SidebarComponent,
-    FooterComponent
+    MenuParentsComponent,
+    MenuChildrensComponent
   ],
   imports: [
     BrowserModule,
