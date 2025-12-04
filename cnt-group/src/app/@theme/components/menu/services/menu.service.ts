@@ -61,12 +61,34 @@ export class MenuService {
       parentItem: 7,
       showSubMenu: false,
       subMenuItems: []
+    },
+    {
+      idItem: 2,
+      itemName: 'Статистика',
+      itemLink: 'NULL',
+      iconTypeId: 1,
+      icon: null,
+      itemOrder: 2,
+      parentItem: 1, 
+      showSubMenu: false,
+      subMenuItems: []
+    },
+    {
+      idItem: 3,
+      itemName: 'Общая',
+      itemLink: 'statistics/overview',
+      iconTypeId: 1,
+      icon: null,
+      itemOrder: 3,
+      parentItem: 2, 
+      showSubMenu: false,
+      subMenuItems: []
     }
   ];
+  constructor() { }
   private currentItemSubject = new BehaviorSubject<MenuItem>(this.menuItems[0]);
 currentItem$ = this.currentItemSubject.asObservable();
-  constructor() {  }
- getParentItems(): MenuItem[] {
+getParentItems(): MenuItem[] {
   return this.menuItems.filter(item => item.parentItem === null);
 }
 
@@ -74,7 +96,7 @@ getChildrenItems(selectedItem: MenuItem): MenuItem[] {
   return this.menuItems.filter(subItem => subItem.parentItem === selectedItem.idItem);
 }
 
-// Обновляем currentItemSubject.
+
 setCurrentItem(item: MenuItem): void {
   this.currentItemSubject.next(item);
 }
