@@ -1,11 +1,12 @@
 <div class="submenu">
   <ul>
     <li 
-      class="submenu__item" 
+      class="submenu__item"
+      [routerLink]="subItem.itemLink" 
       *ngFor="let subItem of menuChildrenItems" 
       [ngClass]="{ 'show-children': subItem.showSubMenu }" 
       tabindex="0">
-
+      
       <span>
         {{ subItem.itemName }}
         <span 

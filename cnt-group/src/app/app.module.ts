@@ -12,6 +12,7 @@ import { MenuChildrensComponent } from './@theme/components/menu/components/menu
 import { ThemeSwitcherComponent } from './@theme/components/header/theme-switcher/theme-switcher.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { ThemeSwitcherComponent } from './@theme/components/header/theme-switche
     FooterComponent,
     MenuParentsComponent,
     MenuChildrensComponent,
-    ThemeSwitcherComponent
+    ThemeSwitcherComponent,
+    
   ],
   imports: [
     BrowserModule,
