@@ -19,4 +19,8 @@ export class ThemeSwitcherComponent implements OnInit {
     this.currentTheme = this.currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
     this.themeService.setTheme(this.currentTheme);
   }
+  toggleTheme2() {
+    this.currentTheme = this.currentTheme === 'light-theme' ? 'az' : 'light-theme';
+    this.themeService.setTheme(this.currentTheme);
+  }
 } 
