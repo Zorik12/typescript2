@@ -77,8 +77,8 @@ body {
 }
 
 .az {
-  --background-color: rgb(250, 0, 0);
-  --block-background: rgb(250, 0, 0);
+  --background-color: rgb(111, 0, 255);
+  --block-background: rgb(111, 0, 255);
   --block-border-color: rgb(238, 0, 0);
 
   --block-text: #d8dde2;
