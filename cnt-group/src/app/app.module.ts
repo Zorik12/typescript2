@@ -11,6 +11,8 @@ import { MenuParentsComponent } from './@theme/components/menu/components/menu-p
 import { MenuChildrensComponent } from './@theme/components/menu/components/menu-childrens/menu-childrens.component';
 import { ThemeSwitcherComponent } from './@theme/components/header/theme-switcher/theme-switcher.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './modules/shared/shared.module';
 
 
 @NgModule({
@@ -23,9 +25,12 @@ import { ThemeSwitcherComponent } from './@theme/components/header/theme-switche
     MenuParentsComponent,
     MenuChildrensComponent,
     ThemeSwitcherComponent,
+
     
   ],
   imports: [
+    ReactiveFormsModule,
+    SharedModule,
     BrowserModule,
     AppRoutingModule
   ],
