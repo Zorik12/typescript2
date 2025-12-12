@@ -34,10 +34,10 @@ export class AddUserFormComponent implements OnInit {
   }
 
   addNewUser() {
-      if (this.addUserForm.invalid) {
-    this.addUserForm.markAllAsTouched();
-    return;
-  }
+    if (this.addUserForm.invalid) {
+      this.addUserForm.markAllAsTouched();
+      return;
+    }
     const newUser: UserRegister = {
       userId: this.users.length + 1,
       userLogin: this.addUserForm.get('userLogin')?.value,
@@ -48,6 +48,7 @@ export class AddUserFormComponent implements OnInit {
       userPatronymic: this.addUserForm.get('userPatronymic')?.value,
       userCreateDate: this.getCurrentDateTime(),
       userBirthday: this.addUserForm.get('userBirthday')?.value,
+      
     };
   
     this.users.push(newUser);
